@@ -1,0 +1,156 @@
+body{
+    display: grid;
+    min-height: 100vh;
+}
+
+.hero{
+    align-self: start;
+}
+
+.footer_section{
+    align-self: end;
+}
+
+.service_section_content-text{
+    padding: 60px 0;
+    text-align: center;
+    font-family: var(--font-2);
+}
+
+.service_section_content--cards{
+    display: grid;
+    grid-template-columns: repeat(3, 250px);
+    justify-content: center;
+    gap: 20px;
+}
+
+.service_card{
+    padding: 10px;
+    box-shadow: 3px 4px 6px 5px lightgray;
+}
+
+.plan_price{
+    text-align: center;
+}
+
+.plan{
+    color:var(--label);
+    font-size: var(--font_size-4);
+    font-family: var(--font-3);
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+.price{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.amt{
+    font-size: var(--font-2);
+    font-family: var(--font-3);
+    font-weight: bold;
+}
+
+.month{
+    opacity: var(--text_opacity);
+    font-weight: bold;
+}
+
+.service_card_text{
+    text-align: center;
+    font-family: var(--font-2);
+}
+
+.feature_item{
+    display: flex;
+    flex-direction:row;
+    gap: 10px;
+    align-items: center;
+}
+
+.features{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    align-items: center;
+}
+
+.feature_item i{
+    font-size: var(--font_size-4);
+    color: red;
+}
+
+.feature_item p{
+    font-family: var(--font-3);
+    opacity: 0.8;
+}
+
+/* Accordion section starts */
+
+   .container_body{
+      width: 80%;
+      margin: 80px 100px 10px;
+      
+  } 
+  
+  .accordion_item{
+      border-top: 1px solid rgba(212, 206, 206, 0.5);
+      border-bottom: 1px solid rgba(212, 206, 206, 0.5);
+      padding: 10px 0;
+  }
+  
+  .accordion_header{
+      margin-bottom: 5px;
+      font-size: 20px;
+      position: relative;
+      cursor: pointer;
+  }
+  
+  .accordion_body{
+      margin: 20px auto;
+      font-size: 14px;
+      opacity: 0.7;
+      display: none;
+  }
+  
+  .accordion_header::after{
+      content: "+";
+      font-size: 25px;
+      font-weight: 700;
+      position: absolute;
+      right: 10px;
+      transition: transform 0.2s ease-in-out;
+  }
+  
+  .accordion_header.active + .accordion_body{
+      display: block;
+  }
+  
+  .accordion_header.active::after{
+      transform: rotate(45deg);
+  }
+/* Accirdion section ends  */
+
+@media(max-width:1024px){
+    .service_section_content--cards{
+        grid-template-columns:repeat(2, 250px);
+    }
+}
+
+@media(max-width:568px){
+    .service_section_content--cards{
+        grid-template-columns:repeat(1, 250px);
+    }
+
+}
+
+@media(max-width:500px){
+    .container_body{
+        display: grid;
+        grid-template-columns: repeat(1, 230px);
+    }
+}
